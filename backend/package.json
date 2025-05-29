@@ -1,0 +1,24 @@
+{
+  "name": "slack-mock-api-dashboard",
+  "version": "1.0.0",
+  "description": "A mock API dashboard for Slack using React and Node.js",
+  "keywords": [],
+  "license": "MIT",
+  "author": "Your Name",
+  "type": "commonjs",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.21.2",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

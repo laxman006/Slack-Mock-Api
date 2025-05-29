@@ -1,0 +1,17 @@
+{
+    "totalLicenses": 100,
+    "usedLicenses": 50,
+    "availableLicenses": 50,
+    "licenseDetails": [
+        {
+            "id": 1,
+            "type": "Standard",
+            "status": "Active"
+        },
+        {
+            "id": 2,
+            "type": "Premium",
+            "status": "Inactive"
+        }
+    ]
+}
