@@ -24,6 +24,15 @@ router.post('/users.add', (req, res) => {
   res.status(201).json(newUser);
 });
 
+// GET: Get user by ID
+router.get('/users.info', (req, res) => {
+  const userId = req.query.user;
+  const user = currentUsers.find((u) => u.id === userId);
+  if (!user) return res.status(404).json({ error: 'User not found' });
+
+  res.status(200).json(user);
+});
+
 // PUT: Update user
 router.put('/users.update', (req, res) => {
   const { id, name, email } = req.body;

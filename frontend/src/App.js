@@ -122,6 +122,11 @@ export default function SlackDashboard() {
             <ul>
               <li>Total Licenses: {license.totalLicenses}</li>
               <li>Used Licenses: {license.usedLicenses}</li>
+              <li>Available Licenses: {license.availableLicenses}</li>
+              <li>License Key: {license.licenseKey}</li>
+              <li>Expiration Date: {license.expirationDate}</li>
+              <li>License Type: {license.licenseType}</li>
+              <li>Support Contact: {license.supportContact}</li>
             </ul>
           ) : (
             <p>No license info available</p>
