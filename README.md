@@ -42,6 +42,14 @@ Shows a list of registered users with their details like name and email.
 
 ---
 
+### 👥 Users List Update
+
+Shows a list of registered users with their details like name and email.
+![Users List](https://github.com/user-attachments/assets/7ed1884d-8811-49c9-9d67-449fbe9da0ed)
+)
+
+---
+
 ### 🔐 License Information
 
 Displays current license status, expiry date, and license key.
