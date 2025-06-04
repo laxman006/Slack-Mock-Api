@@ -157,9 +157,22 @@ export default function SlackDashboard() {
             onChange={(e) => setNewEmail(e.target.value)}
           />
           {editMode ? (
-            <button className="btn btn-warning me-2" onClick={handleUpdateUser}>
-              Update User
-            </button>
+            <>
+              <button className="btn btn-warning me-2" onClick={handleUpdateUser}>
+                Update User
+              </button>
+              <button
+                className="btn btn-secondary"
+                onClick={() => {
+                  setEditMode(false);
+                  setSelectedUser(null);
+                  setNewName("");
+                  setNewEmail("");
+                }}
+              >
+                Cancel
+              </button>
+            </>
           ) : (
             <button className="btn btn-primary" onClick={handleAddUser}>
               Add User
@@ -180,15 +193,23 @@ export default function SlackDashboard() {
                   key={user.id}
                   className="list-group-item d-flex justify-content-between align-items-center"
                 >
-                  <span onClick={() => handleUserClick(user.id)} style={{ cursor: "pointer" }}>
+                  <span>
                     {user.name} - {user.email}
                   </span>
-                  <button
-                    className="btn btn-sm btn-danger"
-                    onClick={() => handleDeleteUser(user.id)}
-                  >
-                    Delete
-                  </button>
+                  <div>
+                    <button
+                      className="btn btn-sm btn-warning me-2"
+                      onClick={() => handleUserClick(user.id)}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className="btn btn-sm btn-danger"
+                      onClick={() => handleDeleteUser(user.id)}
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </li>
               ))}
             </ul>
